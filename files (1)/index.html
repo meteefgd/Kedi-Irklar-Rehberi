@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Kedi Irkları Rehberi | CRUD + Türkçe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- LOADING -->
+<div id="loading" class="loading-overlay">
+    <div class="loading-spinner"><i class="fas fa-cat fa-spin"></i> Sayfa yükleniyor...</div>
+</div>
+
+<!-- TOAST -->
+<div id="toastContainer" class="toast-container"></div>
+
+<!-- DARK MODE BUTTON -->
+<button id="darkModeToggle" class="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container header-container">
+        <div class="logo"><i class="fas fa-paw"></i><h1>🐾 Kedi Irkları Rehberi</h1></div>
+        <nav class="nav">
+            <button id="btnAll" class="nav-btn active"><i class="fas fa-table-list"></i> Tüm Irklar</button>
+            <button id="btnFav" class="nav-btn"><i class="fas fa-heart"></i> Favorilerim</button>
+            <button id="btnAdd" class="nav-btn btn-primary-nav"><i class="fas fa-plus-circle"></i> Yeni Irk Ekle</button>
+        </nav>
+    </div>
+</header>
+
+<!-- MAIN -->
+<main class="main">
+    <div class="container">
+        <section class="search-filter-section">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Irk adı, köken veya açıklamada ara... (Türkçe)">
+            </div>
+            <div class="filters">
+                <select id="filterOrigin"><option value="">🌍 Tüm Kökenler</option></select>
+                <select id="filterTemperament"><option value="">🐱 Tüm Mizaçlar</option></select>
+                <select id="sortBy">
+                    <option value="name">📝 Ada Göre (A-Z)</option>
+                    <option value="name-desc">📝 Ada Göre (Z-A)</option>
+                    <option value="life">⏳ Ömre Göre (Kısa→Uzun)</option>
+                    <option value="life-desc">⏳ Ömre Göre (Uzun→Kısa)</option>
+                </select>
+            </div>
+            <div class="stats"><span id="breedCount">0</span> ırk listeleniyor</div>
+        </section>
+
+        <div id="breedsGrid" class="breeds-grid"></div>
+        <div id="emptyState" class="empty-state hidden">
+            <i class="fas fa-cat"></i><h3>Hiç ırk bulunamadı 😿</h3>
+            <p>Arama kriterlerini değiştir veya yeni bir ırk ekle.</p>
+        </div>
+    </div>
+</main>
+
+<footer class="footer"><div class="container"><p>Web Tasarımı Ödevi | TheCatAPI + Türkçe Çeviri | CRUD • LocalStorage • Dark Mode</p></div></footer>
+
+<!-- MODAL: EKLE / DÜZENLE -->
+<div id="modal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+        <div class="modal-header"><h2 id="modalTitle">Yeni Kedi Irkı Ekle</h2><button class="modal-close" id="closeModalBtn">&times;</button></div>
+        <form id="breedForm">
+            <input type="hidden" id="breedId">
+            <div class="form-group"><label><i class="fas fa-tag"></i> Irk Adı *</label><input type="text" id="breedName" required placeholder="Örn: Ankara Kedisi"></div>
+            <div class="form-group"><label><i class="fas fa-globe"></i> Köken *</label><input type="text" id="breedOrigin" required placeholder="Örn: Türkiye"></div>
+            <div class="form-group"><label><i class="fas fa-brain"></i> Mizaç (virgülle ayır)</label><input type="text" id="breedTemperament" placeholder="Örn: Zeki, Oyuncu, Sevecen"></div>
+            <div class="form-group"><label><i class="fas fa-hourglass-half"></i> Yaşam Süresi (yıl)</label><input type="text" id="breedLife" placeholder="Örn: 12-16"></div>
+            <div class="form-group"><label><i class="fas fa-align-left"></i> Açıklama *</label><textarea id="breedDescription" rows="4" required placeholder="Türkçe açıklama..."></textarea></div>
+            <div class="form-group"><label><i class="fas fa-image"></i> Görsel URL</label><input type="url" id="breedImage" placeholder="https://... (boş bırakılırsa varsayılan)"></div>
+            <div class="form-actions"><button type="button" class="btn btn-secondary" id="cancelModalBtn">İptal</button><button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Kaydet</button></div>
+        </form>
+    </div>
+</div>
+
+<!-- MODAL: DETAY -->
+<div id="detailModal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content modal-large">
+        <div class="modal-header"><h2 id="detailTitle">Irk Detayı</h2><button class="modal-close" id="closeDetailBtn">&times;</button></div>
+        <div id="detailBody" class="detail-body"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
