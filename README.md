@@ -236,9 +236,9 @@ deleteBreed(id)
 
 ## 👤 Geliştirici
 
-**Ad Soyad:** *(Buraya kendi adını yaz)*
-**Öğrenci No:** *(Öğrenci numaran)*
-**Bölüm:** *(Bölüm adı)*
+**Ad Soyad:** *Mete GÜDBOĞDU*
+**Öğrenci No:** *25019909016*
+**Bölüm:** *Robotik ve Yapay Zeka*
 **Ders:** Web Tasarımı
 **Dönem:** 2025–2026 Bahar
 
