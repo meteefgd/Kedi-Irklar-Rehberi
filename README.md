@@ -240,7 +240,7 @@ deleteBreed(id)
 
 ## 👤 Geliştirici
 
-**Ad Soyad:** Mete GÜDBOĞDU
+**Ad Soyad:** Mete GÜNDOĞDU
 **Öğrenci No:** 25019909016
 **Bölüm:** Robotik ve Yapay Zeka
 **Ders:** Web Tasarımı
