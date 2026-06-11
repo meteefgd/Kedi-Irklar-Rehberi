@@ -2,6 +2,10 @@
 
 > **Web Tasarımı Dersi Ödevi** — TheCatAPI entegrasyonu ile geliştirilmiş tam işlevli, Türkçe arayüzlü kedi ırkları yönetim uygulaması.
 
+## 🌐 Canlı Demo
+
+**[→ https://meteefgd.github.io/Kedi-Irklar-Rehberi/](https://meteefgd.github.io/Kedi-Irklar-Rehberi/)**
+
 ---
 
 ## 📋 İçindekiler
@@ -23,7 +27,7 @@
 
 Bu proje, **Web Tasarımı** dersi kapsamında geliştirilmiş, gerçek bir Public API'den veri çeken ve tam CRUD (Create, Read, Update, Delete) işlemlerini destekleyen dinamik bir web uygulamasıdır.
 
-[TheCatAPI](https://thecatapi.com/) üzerinden 67+ kedi ırkının verisi çekilmekte, her ırkın açıklaması [MyMemory Translation API](https://mymemory.translated.net/) aracılığıyla otomatik olarak Türkçeye çevrilmektedir. Kullanıcılar mevcut ırklara ek olarak kendi özel ırkı kayıtlarını oluşturabilir, düzenleyebilir ve silebilir.
+[TheCatAPI](https://thecatapi.com/) üzerinden 67+ kedi ırkının verisi çekilmekte, her ırkın açıklaması [MyMemory Translation API](https://mymemory.translated.net/) aracılığıyla otomatik olarak Türkçeye çevrilmektedir. Kullanıcılar mevcut ırklara ek olarak kendi özel ırk kayıtlarını oluşturabilir, düzenleyebilir ve silebilir.
 
 ---
 
@@ -47,7 +51,7 @@ Bu proje, **Web Tasarımı** dersi kapsamında geliştirilmiş, gerçek bir Publ
 |---|---|
 | **Create** | Kullanıcı tanımlı özel ırk ekleme (modal form) |
 | **Read** | API + LocalStorage verilerini birleştirerek listeleme |
-| **Update** | Mevcut özel irkları düzenleme |
+| **Update** | Mevcut özel ırkları düzenleme |
 | **Delete** | Özel ırkı onay dialogu ile silme |
 
 ### Ek Özellikler
@@ -109,10 +113,10 @@ kedi-irklari-rehberi/
 ### Seçenek 1 — Doğrudan Açma (En Basit)
 ```bash
 # Repoyu klonla
-git clone https://github.com/KULLANICI_ADI/kedi-irklari-rehberi.git
+git clone https://github.com/meteefgd/Kedi-Irklar-Rehberi.git
 
 # Klasöre gir
-cd kedi-irklari-rehberi
+cd Kedi-Irklar-Rehberi
 
 # index.html dosyasını tarayıcıda aç
 # (Çift tıklama veya sürükle-bırak yeterlidir)
@@ -226,7 +230,7 @@ deleteBreed(id)
 
 ## 📸 Ekran Görüntüleri
 
-> *(GitHub'a yükledikten sonra `screenshots/` klasörü oluşturup buraya ekleyebilirsin.)*
+> *(İstersen `screenshots/` klasörü oluşturup buraya ekleyebilirsin.)*
 
 | Aydınlık Mod | Karanlık Mod |
 |---|---|
@@ -236,9 +240,9 @@ deleteBreed(id)
 
 ## 👤 Geliştirici
 
-**Ad Soyad:** *Mete GÜDBOĞDU*
-**Öğrenci No:** *25019909016*
-**Bölüm:** *Robotik ve Yapay Zeka*
+**Ad Soyad:** Mete GÜDBOĞDU
+**Öğrenci No:** 25019909016
+**Bölüm:** Robotik ve Yapay Zeka
 **Ders:** Web Tasarımı
 **Dönem:** 2025–2026 Bahar
 
